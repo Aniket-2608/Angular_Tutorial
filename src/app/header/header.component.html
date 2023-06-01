@@ -1,0 +1,14 @@
+<div class="header">
+    <div class="site-image">
+        <!-- <img src="/assets/shopping.jpg" alt="not found" width="320" height="240"> -->
+        <!-- instead to hardcoding the img src we can use property binding. For that the source is already defined in the .ts file, and we just have to use it here by using property binding -->
+        <img [src]="source" alt="not found" width="320" height="240">
+    </div>
+    <div class="site-slogan">
+        <!-- <h2>Your one stop shop for everything</h2> -->
+        <!-- as we are using angular we should not render datas statically becoz there are scenarios where we have to render this same data in multiple places, then we have to type the same content again and again wherever it will require which. And there might be chance of data manipulation. To solve this problem we can use strinf interpolation-->
+        <h2> {{ slogan }} </h2>
+    </div>
+</div>
+
+<!-- using property binding we can bind a prooperty of a DOM object to a property of a Component class -->

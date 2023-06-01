@@ -1,0 +1,8 @@
+<div class="search-div" [ngClass]="{changeBackground: searchValue != '' }">
+    <span> <b> Search : </b> </span>
+    <!-- <input type="text" (input)="changeSearchValue($event)" >  -->
+    <!-- Whenever an event happens, it emits some event data related to that input event and that data will passed to this method as its argument and that is $event. (this $events holds the event data related to that event)-->
+    <!-- now we are going to apply two data binding in this searach bar. Event binding enables data transfer from view template to component class but not the vice versa. So will handle the search bar with the help of two way data binding. For property binding we use a set of square braces [] and for event binding we use a set of parenthesis (). So for two way data binding we use [(ngModule)] and use a directive ngModule -->
+    <input type="text" [(ngModel)] = "searchValue" > 
+    <span *ngIf="searchValue !=  ''" >You Searched for "{{searchValue}}"</span>
+</div>
